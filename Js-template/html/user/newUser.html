@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+  <a href="../index.html">
+    <img src="../RavLogo.png" alt="logo" class="logo">
+  </a>
+
+  <div class="input-container">
+    <div class="input-group">
+      <label for="username">Käyttäjä</label>
+      <input type="text" name="username" placeholder="Username" id="username" required autofocus/>
+    </div>
+    <p class="newUser"><a href="newUser.html">Uusi käyttäjä</a></p>
+  </div>
+
+  <div class="input-container">
+    <div class="input-group">
+      <label for="password">Salasana</label>
+      <input type="password" name="password" placeholder="Password" class="myPasswordField" id="password"  required/>
+    </div>
+    <p class="newPassword"><a href="newPassword.html">Unohtuiko salasana?</a></p>
+  </div>
+  <button class="login">Kirjaudu</button>
+</nav>
+<main>
+
+  <h1>Anna käyttäjä nimi</h1>
+  <form class="newuserFrom">
+    <label for="newuser">Uusi käyttäjä</label>
+    <input type="text" name="newUser" placeholder="Username" id="newuser" required autofocus>
+
+    <label for="newpassword">Anna salasana</label>
+    <input type="text" name="newUser" placeholder="Password" id="newpassword" required>
+
+    <label for="email">Anna sähköposti</label>
+    <input type="text" name="Emal" placeholder="Email" id="email" required>
+
+    <label for="phone">Anna puhelin numero</label>
+    <input type="tel" name="phone" placeholder="Phonenumber" id="phone" required>
+
+    <label for="profilepic">Anna halutessasi profiili</label>
+    <input type="file" accept="image/*" name="profilepic" id="profilepic">
+
+    <button class="newUserButton">Luo käyttäjä</button>
+  </form>
+</main>
+
+</body>
+</html>

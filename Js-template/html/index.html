@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etusivu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="../javascript/main.js" defer></script>
+
+</head>
+
+<body>
+<nav>
+  <a href="index.html">
+    <img src="RavLogo.png" alt="logo" class="logo">
+  </a>
+
+  <div class="input-container">
+    <div class="input-group">
+      <label for="username">Käyttäjä</label>
+      <input type="text" name="username" placeholder="Username" id="username" required autofocus/>
+    </div>
+    <p class="newUser"><a href="user/newUser.html">Uusi käyttäjä</a></p>
+  </div>
+
+  <div class="input-container">
+    <div class="input-group">
+      <label for="password">Salasana</label>
+      <input type="password" name="password" placeholder="Password" class="myPasswordField" id="password"  required/>
+    </div>
+    <p class="newPassword"><a href="user/newPassword.html">Unohtuiko salasana?</a></p>
+  </div>
+
+  <button class="login">Kirjaudu</button>
+</nav>
+
+<main>
+  <h1>Ravintolat</h1>
+
+  <label for="city">Valitse kaupuki</label>
+  <select id="city">
+    <option value="helsinki">Helsinki</option>
+    <option value="espoo">Espoo</option>
+    <option value="Vantaa">Vantaa</option>
+  </select>
+
+  <button class="dropdownB">Etsi</button>
+
+  <h2>Lista Ravintoloista</h2>
+
+  <ul>
+    <li class="ravintola">
+      <h3>Ravintola 1</h3>
+      <p class="address">Toimistotie 1, 02700 Vantaa</p>
+      <p class="phone">0200 123 456</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+    <li class="ravintola">
+      <h3>Ravintola 2</h3>
+      <p class="address">Esimerkkikatu 2, 00200 Helsinki</p>
+      <p class="phone">0200 321 456</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+    <li class="ravintola">
+      <h3>Ravintola 3</h3>
+      <p class="address">Ravintolatie 3, 02600 Espoo</p>
+      <p class="phone">0200 123 654</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+    <li class="ravintola">
+      <h3>Ravintola 4</h3>
+      <p class="address">Ravintolatie 5, 00200 Espoo</p>
+      <p class="phone">0200 135 791</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+    <li class="ravintola">
+      <h3>Ravintola 5</h3>
+      <p class="address">Kauppakeskus kamppi, Taso 3, 00200 Helsinki</p>
+      <p class="phone">0200 546 213</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+    <li class="ravintola">
+      <h3>Ravintola 6</h3>
+      <p class="address">Ostari Soppa, 02700 Vantaa</p>
+      <p class="phone">0200 246 826</p>
+      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
+    </li>
+  </ul>
+</main>
+</body>
+
+</html>
