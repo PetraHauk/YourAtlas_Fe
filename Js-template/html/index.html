@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etusivu</title>
   <link rel="stylesheet" href="style.css">
-  <script src="../javascript/main.js" defer></script>
+  <script src="../javascript/resturant.js" defer></script>
 
 </head>
 
@@ -40,53 +40,16 @@
   <h1>Ravintolat</h1>
 
   <label for="city">Valitse kaupuki</label>
-  <select id="city">
-    <option value="helsinki">Helsinki</option>
-    <option value="espoo">Espoo</option>
-    <option value="Vantaa">Vantaa</option>
-  </select>
+  <select id="city" onchange="filterByCity()">
+  <!-- City options will be dynamically populated here -->
+</select>
 
   <button class="dropdownB">Etsi</button>
 
   <h2>Lista Ravintoloista</h2>
 
-  <ul>
-    <li class="ravintola">
-      <h3>Ravintola 1</h3>
-      <p class="address">Toimistotie 1, 02700 Vantaa</p>
-      <p class="phone">0200 123 456</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
-    <li class="ravintola">
-      <h3>Ravintola 2</h3>
-      <p class="address">Esimerkkikatu 2, 00200 Helsinki</p>
-      <p class="phone">0200 321 456</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
-    <li class="ravintola">
-      <h3>Ravintola 3</h3>
-      <p class="address">Ravintolatie 3, 02600 Espoo</p>
-      <p class="phone">0200 123 654</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
-    <li class="ravintola">
-      <h3>Ravintola 4</h3>
-      <p class="address">Ravintolatie 5, 00200 Espoo</p>
-      <p class="phone">0200 135 791</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
-    <li class="ravintola">
-      <h3>Ravintola 5</h3>
-      <p class="address">Kauppakeskus kamppi, Taso 3, 00200 Helsinki</p>
-      <p class="phone">0200 546 213</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
-    <li class="ravintola">
-      <h3>Ravintola 6</h3>
-      <p class="address">Ostari Soppa, 02700 Vantaa</p>
-      <p class="phone">0200 246 826</p>
-      <p class="menuButton"><a href="esimerkkiMenu.html">Katso menu</a></p>
-    </li>
+  <ul id="restaurant-list">
+    <!-- Resturants will be loaded here -->
   </ul>
 </main>
 </body>
