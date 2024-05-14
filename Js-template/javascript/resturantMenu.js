@@ -17,18 +17,20 @@ async function fetchWeeklyMenu(id) {
 function displayTodayMenu(menuData) {
   // Get today's date
   const today = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const todayDateString = today.toLocaleDateString('en-US', options);
+  const options = { weekday: 'long', month: 'long', day: 'numeric' };
+  const todayDateString = today.toLocaleDateString('fi-FI', options);
 
-  // Find today's menu
+  // Find today's menu in menuData.days array
   const todayMenu = menuData.days.find(day => day.date === todayDateString);
+
+  console.log('todayDate', todayDateString);
+  console.log('todayMenu', todayMenu);
 
   // Display today's menu details on the page
   const menuElement = document.getElementById('today');
   if (todayMenu) {
     menuElement.innerHTML = `
-      <h3>${todayMenu.date}</h3>
-      <h4>Menu</h4>
+      <h3>${todayDateString}</h3> <!-- Corrected variable name -->
       <ul>
         ${todayMenu.courses.map((course) => `
           <li>
@@ -44,11 +46,18 @@ function displayTodayMenu(menuData) {
   }
 }
 
+
+
 function displayWeeklyMenu(menuData) {
   const days = menuData.days; // Access the 'days' property
 
   const menuElement = document.createElement('div');
   menuElement.className = 'menu';
+
+  if (days.length === 0) {
+    menuElement.innerHTML = '<p>No menu available for this week.</p>';
+    return;
+  }
 
   days.forEach((day) => {
     const dayElement = document.createElement('div');

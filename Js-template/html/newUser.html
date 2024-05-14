@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/menu.css">
-  <script src="../javascript/resturantMenu.js" defer></script>
-  <script src="../javascript/login.js" defer></script>
+  <link rel="stylesheet" href="../css/newuser.css">
+
   <script src="../javascript/header.js" defer></script>
+  <script src="../javascript/login.js" defer></script>
+  <script src="../javascript/newUser.js" defer></script>
 </head>
+
 <body>
 
 <nav>
@@ -40,24 +42,22 @@
   </div>
 </nav>
 
-<main class="menu">
-  <h1>Menu</h1>
+<main>
 
-  <section class="today">
-    <h2>Päivän Menu</h2>
-    <div id="today">
-      <!-- Todays menu will be loaded here -->
-    </div>
-  </section>
-  
-  <img src="../image/divider.png">
+  <h1>Anna käyttäjä nimi</h1>
+  <form class="newUserForm">
+    <label for="newuser">Uusi käyttäjä</label>
+    <input type="text" name="newUser" placeholder="Username" id="newuser" required autofocus>
+    <p id="error"></p>
 
-  <section class="week">
-    <h2>Viikon menu</h2>
-    <ol id="weekly">
-      <!-- Weeks menu will be loaded here -->
-    </ol>
-  </section>
+    <label for="newpassword">Anna salasana</label>
+    <input type="password" name="password" placeholder="Password" id="newpassword" required>
+
+    <label for="email">Anna sähköposti</label>
+    <input type="email" name="email" placeholder="Email" id="email" required>
+
+    <button class="newUserButton">Luo käyttäjä</button>
+  </form>
 </main>
 
 </body>

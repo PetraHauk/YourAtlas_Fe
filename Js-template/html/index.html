@@ -6,35 +6,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etusivu</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="../javascript/resturant.js" defer></script>
 
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="../javascript/header.js" defer></script>
+  <script src="../javascript/resturant.js" defer></script>
+  <script src="../javascript/login.js" defer></script>
 </head>
 
 <body>
 <nav>
   <a href="index.html">
-    <img src="RavLogo.png" alt="logo" class="logo">
+    <img src="../image/RavLogo.png" alt="logo" class="logo">
   </a>
 
-  <div class="input-container">
-    <div class="input-group">
+  <form id="login"> <!-- Changed ID to login -->
+    <div class="input-container">
       <label for="username">Käyttäjä</label>
       <input type="text" name="username" placeholder="Username" id="username" required autofocus/>
     </div>
-    <p class="newUser"><a href="user/newUser.html">Uusi käyttäjä</a></p>
-  </div>
 
-  <div class="input-container">
-    <div class="input-group">
+    <div class="input-container">
       <label for="password">Salasana</label>
       <input type="password" name="password" placeholder="Password" class="myPasswordField" id="password"  required/>
     </div>
-    <p class="newPassword"><a href="user/newPassword.html">Unohtuiko salasana?</a></p>
-  </div>
 
-  <button class="login">Kirjaudu</button>
+    <button class="login">Kirjaudu</button>
+  </form>
+  <p class="newUserLink"><a href="newUser.html">Uusi käyttäjä</a></p>
+
+  <div class="user-container">
+    <a href="profilePage.html">
+      <img src="../image/profile-circle.256x256.png" class="avatar">
+    </a>
+    <p class="navUser"><a href="profilePage.html" id="usernameNav">Käyttäjänimi</a></p>
+    <p id="logout">Logout</p>
+  </div>
 </nav>
+
 
 <main>
   <h1>Ravintolat</h1>
@@ -43,8 +53,6 @@
   <select id="city" onchange="filterByCity()">
   <!-- City options will be dynamically populated here -->
 </select>
-
-  <button class="dropdownB">Etsi</button>
 
   <h2>Lista Ravintoloista</h2>
 

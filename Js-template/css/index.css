@@ -1,0 +1,90 @@
+
+main label {
+  margin-left: 2.5rem;
+}
+
+select {
+  padding: 5px 20px 5px 20px;
+  background-color: white;
+}
+
+.dropdownB {
+  margin-left: 1rem;
+  padding: 3px 20px 3px 20px;
+}
+
+.dropdownB:hover {
+  background-color: #0273a3;
+}
+
+h2 {
+  font-size: 30px;
+  padding-top: 10px;
+  margin-left: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.ravintola {
+  width: calc(25% - 20px);
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border-color: #0692cf;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1200px){
+  .ravintola {
+    width: calc(40% - 20px);
+  }
+}
+@media screen and (max-width: 800px) {
+  .ravintola {
+    width: calc(85% - 20px);
+  }
+}
+
+h3 {
+  font-size: 25px;
+  margin: unset;
+}
+
+.address {
+  margin-top: 5px;
+  margin-bottom: unset;
+  color: #0692cf;
+  font-size: 18px;
+}
+
+.city {
+  margin-top: 5px;
+}
+
+.menuButton {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #0692cf;
+  vertical-align: middle;
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.menuButton:hover {
+  background-color: #0273a3;
+}
