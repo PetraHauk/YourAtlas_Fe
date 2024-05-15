@@ -1,5 +1,5 @@
 Linkki public HTMl fileen:
-https://users.metropolia.fi/~petramha/WebSovelluskehitys/Yksiloteht/html/
+https://users.metropolia.fi/~petramha/WebSovelluskehitys/Yksiloteht/Js-template/html/index.html
 
 
 <h4>Toiminnalisuuksia:</h4>
