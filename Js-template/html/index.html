@@ -16,50 +16,7 @@
 </head>
 
 <body>
-<nav>
-  <a href="index.html">
-    <img src="../image/RavLogo.png" alt="logo" class="logo">
-  </a>
 
-  <form id="login"> <!-- Changed ID to login -->
-    <div class="input-container">
-      <label for="username">Käyttäjä</label>
-      <input type="text" name="username" placeholder="Username" id="username" required autofocus/>
-    </div>
-
-    <div class="input-container">
-      <label for="password">Salasana</label>
-      <input type="password" name="password" placeholder="Password" class="myPasswordField" id="password"  required/>
-    </div>
-
-    <button class="login">Kirjaudu</button>
-  </form>
-  <p class="newUserLink"><a href="newUser.html">Uusi käyttäjä</a></p>
-
-  <div class="user-container">
-    <a href="profilePage.html">
-      <img src="../image/profile-circle.256x256.png" class="avatar">
-    </a>
-    <p class="navUser"><a href="profilePage.html" id="usernameNav">Käyttäjänimi</a></p>
-    <p id="logout">Logout</p>
-  </div>
-</nav>
-
-
-<main>
-  <h1>Ravintolat</h1>
-
-  <label for="city">Valitse kaupuki</label>
-  <select id="city" onchange="filterByCity()">
-  <!-- City options will be dynamically populated here -->
-</select>
-
-  <h2>Lista Ravintoloista</h2>
-
-  <ul id="restaurant-list">
-    <!-- Resturants will be loaded here -->
-  </ul>
-</main>
 </body>
 
 </html>
