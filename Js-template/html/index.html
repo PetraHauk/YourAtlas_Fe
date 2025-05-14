@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etusivu</title>
+  <title>Title</title>
 
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/index.css">
@@ -18,17 +15,31 @@
   <div class="logo">Logo</div>
 
   <ul class="navbar-nav">
-    <li class="nav-item"><a class="front_page" href="index.html">Worlds</a></li>
+    <li class="nav-item"><a class="front_page" href="worlds.html">Worlds</a></li>
     <li class="nav-item"><a class="profile_page" href="profile.html">Profile</a></li>
     <li class="nav-item"><a href="#">Search</a></li>
   </ul>
 </nav>
 
 <main>
-  <section>
-    <h2>This is the main page</h2>
-    <p>This is a simple website template with HTML and CSS.</p>
-  </section>
+  <form id="login" class="login-form">
+    <div class="form-container" id="username-container">
+      <label for="username">Username</label>
+      <input id="username" type="text">
+    </div>
+    <div class="form-container" id="password-container">
+      <label for="password">Password</label>
+      <input id="password" type="password">
+      <p class="error-message"></p>
+    </div>
+    <div class="form-container" id="login-button-container">
+      <label class="button" id="login-button">Login</label>
+    </div>
+    <div class="additional-container">
+      <p class="register" id="register">Register</p>
+      <p class="forget-password" id="forgot-password">Renew password</p>
+    </div>
+  </form>
 </main>
 
 </body>

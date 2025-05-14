@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Gadugi, Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fffaec;
+  margin: 0;
 }
 
 .navbar {
