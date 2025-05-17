@@ -24,17 +24,28 @@ main {
   background-color: #f5ecd5;
 }
 
-.form-container {
+.forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  margin-top: 7rem;
+  background-color: #f5ecd5;
+}
+
+.input-container {
   width: 80%;
   height: 5rem;
   margin-top: 2rem;
   margin-left: 10%;
 }
 
-#login-button-container, #register-button-container {
+.button-container {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 input {
@@ -46,18 +57,17 @@ input {
   outline: black solid 1px;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
   width: 10rem;
   height: 3rem;
   background-color: #84cebe;
   border-radius: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  font-size: 1rem;
 }
 
-.button:hover {
+button:hover {
   background-color: #565759;
   color: white;
 }

@@ -1,24 +1,43 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const loginForm = document.querySelector("#login");
-  const registerForm = document.querySelector("#register");
+  const loginForm = document.querySelector("#form-login");
+  const registerForm = document.querySelector("#form-register");
+  const forgotForm = document.querySelector("#forgot-password");
 
-  const loadRegisterForm = document.querySelector("#switch-to-register");
-  const loadLoginForm = document.querySelector("#switch-to-login");
+  const linkToRegister = document.querySelector("#link-to-register");
+  const linkToLoginFromRegister = document.querySelector("#link-to-login-from-register");
+  const linkToForgotPassword = document.querySelector("#link-to-forgot-password");
+  const linkToLoginFromForgot = document.querySelector("#link-to-login-from-forgot");
 
+  // Initial state
   loginForm.style.display = "block";
   registerForm.style.display = "none";
+  forgotForm.style.display = "none";
 
-  loadRegisterForm.addEventListener("click", (e) => {
+  linkToRegister.addEventListener("click", (e) => {
     e.preventDefault();
     loginForm.style.display = "none";
     registerForm.style.display = "block";
-  })
+    forgotForm.style.display = "none";
+  });
 
-  loadLoginForm.addEventListener("click", (e) => {
+  linkToLoginFromRegister.addEventListener("click", (e) => {
     e.preventDefault();
     loginForm.style.display = "block";
     registerForm.style.display = "none";
-  })
+    forgotForm.style.display = "none";
+  });
 
-})
+  linkToForgotPassword.addEventListener("click", (e) => {
+    e.preventDefault();
+    loginForm.style.display = "none";
+    registerForm.style.display = "none";
+    forgotForm.style.display = "block";
+  });
 
+  linkToLoginFromForgot.addEventListener("click", (e) => {
+    e.preventDefault();
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+    forgotForm.style.display = "none";
+  });
+});
