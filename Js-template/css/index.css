@@ -14,18 +14,28 @@ main {
   background-color: #f5ecd5;
 }
 
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  margin-top: 4rem;
+  background-color: #f5ecd5;
+}
+
 .form-container {
   width: 80%;
   height: 5rem;
   margin-top: 2rem;
+  margin-left: 10%;
 }
 
-#login-button-container {
+#login-button-container, #register-button-container {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
-
 
 input {
   width: 100%;
@@ -34,7 +44,6 @@ input {
   border-radius: 10px;
   border: none;
   outline: black solid 1px;
-
 }
 
 .button {
@@ -64,4 +73,8 @@ input {
 
 .additional-container p:hover {
   color: #84cebe;
+}
+
+.register-form {
+  display: none;
 }

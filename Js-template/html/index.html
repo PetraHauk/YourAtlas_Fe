@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/index.css">
 
+  <script src="../javascript/login.js"></script>
+
 </head>
 
 <body>
@@ -23,21 +25,48 @@
 
 <main>
   <form id="login" class="login-form">
-    <div class="form-container" id="username-container">
-      <label for="username">Username</label>
-      <input id="username" type="text">
+    <div class="form-container" id="username-container-1">
+      <label for="username-login">Username</label>
+      <input id="username-login" type="text">
     </div>
     <div class="form-container" id="password-container">
-      <label for="password">Password</label>
-      <input id="password" type="password">
+      <label for="password-login">Password</label>
+      <input id="password-login" type="password">
       <p class="error-message"></p>
     </div>
     <div class="form-container" id="login-button-container">
       <label class="button" id="login-button">Login</label>
     </div>
     <div class="additional-container">
-      <p class="register" id="register">Register</p>
+      <p class="register" id="switch-to-register">Register</p>
       <p class="forget-password" id="forgot-password">Renew password</p>
+    </div>
+  </form>
+
+  <form id="register" class="register-form">
+    <div class="form-container" id="username-container-2">
+      <label for="username-register">Username</label>
+      <input id="username-register" type="text">
+    </div>
+    <div class="form-container" id="password-container-register">
+      <label for="password-register">Password</label>
+      <input id="password-register" type="password">
+    </div>
+    <div class="form-container" id="password-container-register-again">
+      <label for="password-again-register">Password again</label>
+      <input id="password-again-register" type="password">
+      <p class="error-message"></p>
+    </div>
+    <div class="form-container" id="email-container">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+      <p class="error-message"></p>
+    </div>
+    <div class="form-container" id="register-button-container">
+      <label class="button" id="register-button">Register</label>
+    </div>
+    <div class="additional-container">
+      <p class="login" id="switch-to-login">Log in</p>
     </div>
   </form>
 </main>
