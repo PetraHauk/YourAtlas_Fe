@@ -1,0 +1,106 @@
+.start-container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Times New Roman", serif;
+  font-weight: lighter;
+}
+
+.world-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.world-item {
+  flex: 0 0 auto;
+  margin: 0 1rem 0 0;
+}
+.world-item:last-child {
+  margin-right: 0;
+}
+
+/* world scroller buttons */
+.scroll-btn {
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.scroll-btn:hover {
+  background-color: #f5ecd5;
+}
+
+.scroll-wrapper {
+  width: calc((24rem + 1rem) * 3);
+  height: 27rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* World Cards */
+
+.world-list {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+.world-item-container {
+  width: 24rem;
+  height: 26rem;
+  background: #f5ecd5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.world-item-container.create-new {
+  background: #d8c4aa;
+}
+
+.world-item-container:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #565759;
+}
+
+/* World pics + text */
+
+.world-item-container img {
+  width: 24rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.world-item-container img.placeholder {
+  width: 15rem;
+  height: auto;
+  object-fit: contain;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.world-item-container img.new-world-icon {
+  width: 15rem;
+  height: auto;
+  object-fit: contain;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.world-item-text {
+  font-size: 1.5rem;
+}

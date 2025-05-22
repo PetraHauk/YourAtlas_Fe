@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/worlds.css">
 
+  <script src="../javascript/worlds.js"></script>
+
 </head>
 
 <body>
@@ -25,9 +27,22 @@
 </nav>
 
 <main>
-  <section>
-    <h2>This is the main page</h2>
-    <p>This is a simple website template with HTML and CSS.</p>
+  <section class="start-container">
+      <h1>Welcome, [Nimi]</h1>
+  </section>
+
+  <section class="world-container">
+
+    <button class="scroll-btn left" onclick="scrollWorlds(-1)"> < </button>
+
+    <div class="scroll-wrapper" id="scroll-wrapper">
+      <ul class="world-list" id="world-list">
+        <!-- All of this is handled in Javascript -->
+      </ul>
+    </div>
+
+    <button class="scroll-btn right" onclick="scrollWorlds(1)"> > </button>
+
   </section>
 </main>
 
