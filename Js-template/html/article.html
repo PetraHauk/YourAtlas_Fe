@@ -19,5 +19,24 @@
   </ul>
 </nav>
 
+<div id="page-container"></div>
+
+<script>
+  const pageContainer = document.getElementById('page-container');
+  const param = 'this will come later'
+
+  fetch(`/api/articles/${param}`, {})
+    .then(res => res.json())
+    .then(data => {
+      const type = data.type;
+
+      window.articleData = data;
+
+      const script = document.createElement("script");
+      script.src = `/javascript/${type}-page-render.js`;
+      pageContainer.appendChild(script);
+    });
+</script>
+
 </body>
 </html>
