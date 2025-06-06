@@ -1,46 +1,4 @@
-const mockWorlds = [
-  {
-    id: 1,
-    name: "Aetheria",
-    image: "../images/example-image.jpg",
-  },
-  {
-    id: 2,
-    name: "Nocturne",
-    image: "none",
-  },
-  {
-    id: 3,
-    name: "Zephyros",
-    image: "../images/example-image2.jpg",
-  },
-  {
-    id: 4,
-    name: "Valemont",
-    image: "none",
-  },
-  {
-    id: 5,
-    name: "Drakethorn",
-    image: null
-  },
-  {
-    id: 6,
-    name: "Ebonreach",
-    image: null
-  },
-  {
-    id: 7,
-    name: "Mytherra",
-    image: null
-  },
-  {
-    id: 8,
-    name: "Skylore",
-    image: "none",
-  }
-];
-
+import { mockWorlds } from "../mockdata/worlds.js";
 
 // THIS IS FOR THE MOCK DATA
 function appendCreateNewWorld(worlds) {
@@ -90,7 +48,16 @@ function renderWorlds(worlds) {
     const itemContainer = document.createElement("div");
     itemContainer.className = "world-item-container";
 
-    if (world.isCreate) itemContainer.classList.add("create-new");
+    if (world.isCreate) {
+      itemContainer.classList.add("create-new");
+      itemContainer.addEventListener("click", (e) => {
+        alert('TODO: add new world item logic');
+      });
+    } else {
+      itemContainer.addEventListener("click", (e) => {
+        window.location.href = `world.html?id=${world.id}`;
+      });
+    }
 
     const imageDiv = document.createElement("div");
     imageDiv.className = "world-item-image";
@@ -151,4 +118,7 @@ function scrollWorlds(direction) {
 document.addEventListener("DOMContentLoaded", () => {
   allWorlds = appendCreateNewWorld(mockWorlds);
   renderWorlds(allWorlds);
+
+  document.getElementById("scroll-left").addEventListener("click", () => scrollWorlds(-1));
+  document.getElementById("scroll-right").addEventListener("click", () => scrollWorlds(1));
 });

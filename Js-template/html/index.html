@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/index.css">
 
-  <script src="../javascript/login.js"></script>
+  <script src="../js/login.js"></script>
 
 </head>
 
@@ -24,7 +24,7 @@
 </nav>
 
 <main>
-  <form id="form-login" class="login-form">
+  <form id="login-form" class="login-form">
     <div class="input-container">
       <label for="username-login">Username</label>
       <input id="username-login" type="text">
@@ -43,23 +43,23 @@
     </div>
   </form>
 
-  <form id="form-register" class="register-form">
+  <form id="register" class="register-form">
     <div class="input-container">
       <label for="username-register">Username</label>
-      <input id="username-register" type="text">
+      <input required id="username-register" type="text">
     </div>
     <div class="input-container">
       <label for="password-register">Password</label>
-      <input id="password-register" type="password">
+      <input required id="password-register" type="password">
     </div>
     <div class="input-container">
       <label for="password-again-register">Password again</label>
-      <input id="password-again-register" type="password">
+      <input required id="password-again-register" type="password">
       <p class="error-message"></p>
     </div>
     <div class="input-container">
       <label for="email">Email</label>
-      <input id="email" type="email">
+      <input required id="email" type="email">
       <p class="error-message"></p>
     </div>
     <div class="button-container">

@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Etusivu</title>
 
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/worlds.css">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/worlds.css" />
 
-  <script src="../javascript/worlds.js"></script>
-
+  <!-- Only this script, with type="module" -->
+  <script type="module" src="../js/worlds.js"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
   <section class="world-container">
 
-    <button class="scroll-btn left" onclick="scrollWorlds(-1)"> < </button>
+    <button id="scroll-left" class="scroll-btn left"> < </button>
 
     <div class="scroll-wrapper" id="scroll-wrapper">
       <ul class="world-list" id="world-list">
@@ -41,7 +41,7 @@
       </ul>
     </div>
 
-    <button class="scroll-btn right" onclick="scrollWorlds(1)"> > </button>
+    <button id="scroll-right" class="scroll-btn right"> > </button>
 
   </section>
 </main>
