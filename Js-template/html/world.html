@@ -23,35 +23,54 @@
 </nav>
 
 <main class="world-detail-container">
+  <h1 id="world-name"> [World name]  </h1>
   <div class="world-container">
-    <h1 id="world-name"> [World name]  </h1>
 
     <ul class="category-list">
       <li class="category-card" id="characters">
         <img src="#">
-        <h3>Characters</h3>
+        <h2>Characters</h2>
       </li>
       <li class="category-card" id="locations">
         <img src="#">
-        <h3>Locations</h3>
+        <h2>Locations</h2>
       </li>
-      <li class="category-card" id="magic-system">
+      <li class="category-card" id="systems">
         <img src="#">
-        <h3>Magic System</h3>
+        <h2>Systems</h2>
       </li>
-      <li class="category-card" id="event">
+      <li class="category-card" id="events">
         <img src="#">
-        <h3>Event</h3>
+        <h2>Events</h2>
       </li>
       <li class="category-card" id="organizations">
         <img src="#">
-        <h3>Organizations</h3>
+        <h2>Organizations</h2>
       </li>
       <li class="category-card" id="general">
         <img src="#">
-        <h3>General</h3>
+        <h2>General</h2>
       </li>
     </ul>
+
+    <div class="box-listing-category-items">
+      <h3 id="category-title">Select a category</h3>
+      <ul class="category-items"></ul>
+    </div>
+
+    <div class="article-preview-box">
+      <div class="article-content-row">
+        <div class="image-preview-box">
+          <img id="preview-image" src="#" alt="Preview Image" />
+        </div>
+        <div class="preview-info-box">
+          <p id="preview-title" class="article-preview-box-name">Article Title</p>
+          <p id="preview-description" class="article-preview-box-description">Short description or summary...</p>
+        </div>
+      </div>
+      <button id="preview-button" class="view-article-button" onclick="">View Article</button>
+    </div>
+
   </div>
 </main>
 

@@ -1,5 +1,5 @@
 export const mockArticles = [
-  // World 1 - Aetheria (2 characters)
+  // World 1 - Aetheria (2 characters, 2 locations)
   {
     article_id: 101,
     type: "Cast",
@@ -18,8 +18,26 @@ export const mockArticles = [
     created_at: "2024-01-02T11:00:00Z",
     updated_at: "2024-01-02T11:00:00Z",
   },
+  {
+    article_id: 201,
+    type: "Location",
+    name: "Silverpine Forest",
+    picture_id: null,
+    world_id: 1,
+    created_at: "2024-02-01T10:00:00Z",
+    updated_at: "2024-02-01T10:00:00Z",
+  },
+  {
+    article_id: 202,
+    type: "Location",
+    name: "Elarian Capital",
+    picture_id: null,
+    world_id: 1,
+    created_at: "2024-02-02T11:00:00Z",
+    updated_at: "2024-02-02T11:00:00Z",
+  },
 
-  // World 2 - Nocturne (1 character)
+  // World 2 - Nocturne (1 character, 1 location)
   {
     article_id: 103,
     type: "Cast",
@@ -29,8 +47,17 @@ export const mockArticles = [
     created_at: "2024-01-03T09:00:00Z",
     updated_at: "2024-01-03T09:00:00Z",
   },
+  {
+    article_id: 203,
+    type: "Location",
+    name: "The Obsidian Depths",
+    picture_id: null,
+    world_id: 2,
+    created_at: "2024-02-03T12:00:00Z",
+    updated_at: "2024-02-03T12:00:00Z",
+  },
 
-  // World 3 - Zephyros (no characters)
+  // World 3 - Zephyros
 
   // World 4 - Valemont (1 character)
   {
@@ -43,7 +70,7 @@ export const mockArticles = [
     updated_at: "2024-01-04T12:00:00Z",
   },
 
-  // World 5 - Drakethorn (3 characters)
+  // World 5 - Drakethorn (3 characters, 1 location)
   {
     article_id: 105,
     type: "Cast",
@@ -71,8 +98,17 @@ export const mockArticles = [
     created_at: "2024-01-07T16:00:00Z",
     updated_at: "2024-01-07T16:00:00Z",
   },
+  {
+    article_id: 204,
+    type: "Location",
+    name: "Ashen Peak",
+    picture_id: null,
+    world_id: 5,
+    created_at: "2024-02-04T14:00:00Z",
+    updated_at: "2024-02-04T14:00:00Z",
+  },
 
-  // World 6 - Ebonreach (no characters)
+  // World 6 - Ebonreach
 
   // World 7 - Mytherra (1 character)
   {
@@ -85,5 +121,6 @@ export const mockArticles = [
     updated_at: "2024-01-08T10:00:00Z",
   },
 
-  // World 8 - Skylore (no characters)
+  // World 8 - Skylore
+
 ];
