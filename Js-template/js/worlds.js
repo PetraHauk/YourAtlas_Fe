@@ -8,8 +8,7 @@ function printUsername () {
 }
 
 // Function for posting a new world
-function registerWorld(e) {
-  e.preventDefault();
+function registerWorld() {
   //Get correct form
   const worldForm = document.querySelector('#postNewWorld');
   //Ger values
@@ -173,4 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("scroll-right").addEventListener("click", () => scrollWorlds(1));
 });
 
-document.getElementById("input-newest-world").addEventListener("click", () => registerWorld(e));
+const postWorldBTN = document.getElementById("input-newest-world")
+postWorldBTN.addEventListener("click", (e) => {
+        e.preventDefault();
+        registerWorld();
+      });
