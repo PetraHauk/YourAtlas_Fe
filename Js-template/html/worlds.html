@@ -47,7 +47,31 @@
 
   </section>
 </main>
+<div class="createWorldModale">
+  <form id="postNewWorld">
+    <label for="world_name">Name:</label><br>
+      <input type="text"
+      id="new-world-name"
+      placeholder="Name your world"
+      min="1"
+      max="255"
+      required
+      />
 
+      <label for="status">Status</label><br>
+
+      <input type="radio" id="Ongoing-story" name="story-status" value="Ongoing">
+      <label for="status">Ongoing</label><br>
+
+      <input type="radio" id="Complete-story" name="story-status" value="Complete">
+      <label for="status">Complete</label><br>
+
+      <input type="radio" id="Abandoned-story" name="story-status" value="Abandoned-story">
+      <label for="status">Abandoned</label><br>
+
+    <button type="submit" id="input-newest-world">Create World</button>
+</form>
+</div>
 </body>
 
 </html>
