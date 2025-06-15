@@ -59,6 +59,7 @@ function renderWorlds(worlds) {
     if (world.isCreate) {
       itemContainer.classList.add("create-new");
       itemContainer.addEventListener("click", (e) => {
+        // TÄNNE SE DOKUMENTIN AVAUS !!!
         alert('TODO: add new world item logic');
       });
     } else {
