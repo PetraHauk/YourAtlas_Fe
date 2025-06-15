@@ -1,5 +1,12 @@
 import { mockWorlds } from "../mockdata/worlds.js";
 
+// Function to print the username for the heading
+function printUsername () {
+  const heading = document.querySelector(".your-username");;
+  const username = localStorage.getItem("username");
+  heading.innerHTML = `${username}`;
+}
+
 // THIS IS FOR THE MOCK DATA
 function appendCreateNewWorld(worlds) {
   return [
@@ -116,6 +123,7 @@ function scrollWorlds(direction) {
 
 // After loading the page.
 document.addEventListener("DOMContentLoaded", () => {
+  printUsername();
   allWorlds = appendCreateNewWorld(mockWorlds);
   renderWorlds(allWorlds);
 

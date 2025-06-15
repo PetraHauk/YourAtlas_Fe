@@ -13,6 +13,8 @@ function fetchLogin(username, password) {
     .then(data => {
       console.log('Login successful');
       localStorage.setItem('authToken', data.token);
+      localStorage.setItem('user_id', data.user.user_id);
+      localStorage.setItem('username', data.user.username);
       // redirect only after successful login
       window.location.href = 'worlds.html';
     })
