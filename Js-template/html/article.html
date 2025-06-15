@@ -5,6 +5,12 @@
   <title>Title</title>
 
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/article.css">
+
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/article.js"></script>
+
+  <script src="../js/main.js"></script>
 
 </head>
 <body>
@@ -16,28 +22,25 @@
     <li class="nav-item"><a class="front_page" href="worlds.html">Worlds</a></li>
     <li class="nav-item"><a class="profile_page" href="profile.html">Profile</a></li>
     <li class="nav-item"><a href="#">Search</a></li>
-    <li class="nav-item"><a href="#">Logout</a></li>
+    <li class="nav-item"><a href="#" class="logout-link">Logout</a></li>
   </ul>
 </nav>
 
-<div id="page-container"></div>
+<div id="page-container">
+  <h2 class="article-title"></h2>
 
-<script>
-  const pageContainer = document.getElementById('page-container');
-  const param = 'this will come later'
+  <div class="article-layout">
+    <div class="article-content">
+    </div>
+    <div class="article-side-box">
+      <div class="article-sidebox-image-container">
+        <img class="article-sidebox-image" src="#">
+      </div>
 
-  fetch(`/api/articles/${param}`, {})
-    .then(res => res.json())
-    .then(data => {
-      const type = data.type;
-
-      window.articleData = data;
-
-      const script = document.createElement("script");
-      script.src = `/javascript/${type}-page-render.js`;
-      pageContainer.appendChild(script);
-    });
-</script>
+      <div class="article-sidebox-info"></div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
