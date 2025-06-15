@@ -10,13 +10,13 @@ function printUsername () {
 // THIS IS FOR THE MOCK DATA
 function appendCreateNewWorld(worlds) {
   return [
-    ...worlds,
     {
       id: "__create__",
       name: "Create new world",
       image: "../images/new-world-icon.png",
       isCreate: true
     },
+    ...worlds,
   ];
 }
 
@@ -26,12 +26,13 @@ function fetchWorldsAndRender() {
     .then(res => res.json())
     .then(worlds => {
       // Append "create new world" card
-      allWorlds = [...worlds, {
+      allWorlds = [{
         id: "__create__",
         name: "Create new world",
         image: "../images/new-world-icon.png",
         isCreate: true,
-      }];
+      }, ...worlds
+      ];
 
       renderWorlds(allWorlds);
     });
