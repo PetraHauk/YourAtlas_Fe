@@ -43,9 +43,9 @@ h1 {
 
 .category-card img {
   width: 4rem;
-  height: 4rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  height: auto;
+  margin-right: 1.2rem;
+  margin-left: 0.5rem;
 }
 
 .category-card h2 {
