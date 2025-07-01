@@ -1,49 +1,4 @@
-function fetchLogin(username, password) {
-  fetch('http://localhost:3000/api/auth/user-login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username, password })
-  })
-    .then(response => {
-      if (!response.ok) throw new Error(response.statusText);
-      return response.json();
-    })
-    .then(data => {
-      console.log('Login successful');
-      localStorage.setItem('authToken', data.token);
-      localStorage.setItem('user_id', data.user.user_id);
-      localStorage.setItem('username', data.user.username);
-      // redirect only after successful login
-      window.location.href = 'worlds.html';
-    })
-    .catch(error => {
-      console.log('Error:', error);
-      alert("Login failed. Please check your credentials.");
-    });
-}
-
-function fetchSignup(username, password, email) {
-  fetch('http://localhost:3000/api/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username, password, email })
-  })
-    .then(response => {
-      if (!response.ok) throw new Error(response.statusText);
-    })
-    .then(data => {
-      console.log('Signup successful. Automatically logging in');
-      return fetchLogin(username, password);
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    })
-}
-
+import { logIn, signUp } from "./controllers/loginController.js";
 
 document.addEventListener("DOMContentLoaded", function() {
   const loginForm = document.querySelector("#login-form");
@@ -55,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const linkToForgotPassword = document.querySelector("#link-to-forgot-password");
   const linkToLoginFromForgot = document.querySelector("#link-to-login-from-forgot");
 
-  // Initial state
+  // Initial state (Login page)
   loginForm.style.display = "block";
   registerForm.style.display = "none";
   forgotForm.style.display = "none";
@@ -99,25 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const username = loginUsername.value.trim();
     const password = loginPassword.value;
 
-    let errors = [];
-
-    if (username === '' || username == null) {
-      errors.push("Username is required");
-    }
-
-    if (password === '' || password == null) {
-      errors.push("Password is required");
-    }
-
-    console.log('User:', username, password);
-
-    if(errors.length > 0){
-      console.log(errors);
-      alert(errors.join('\n'));
-      return;
-    }
-
-    fetchLogin(username, password);
+    logIn(username, password);
   });
 
   // ----------- Register -----------
@@ -135,41 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const repeatPassword = registerRepeatPassword.value;
     const email = registerEmail.value.trim();
 
-    let errors = [];
-
-    if(username === '' || username == null){
-      errors.push("Username is required");
-    }
-
-    if(username.length < 5){
-      errors.push("Username should be at least 5 characters");
-    }
-
-    if(password === '' || password == null){
-      errors.push("Password is required");
-    }
-
-    if(password !== repeatPassword){
-      errors.push("Passwords do not match");
-    }
-
-    if(password.length < 8){
-      errors.push("Password must be at least 8 characters long");
-    }
-
-    if(email === '' || email == null){
-      errors.push("Email is required");
-    }
-
-    console.log('User:', username, password, email);
-
-    if(errors.length > 0){
-      console.log(errors);
-      alert(errors.join('\n'));
-      return;
-    }
-
-    fetchSignup(username, password, email);
+    signUp(username, password, repeatPassword, email);
   })
 
   // ----------- Forgot Password -----------
