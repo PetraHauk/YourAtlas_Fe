@@ -4,9 +4,22 @@ export function registerWorld() {
   const worldForm = document.querySelector('#postNewWorld');
   //Ger values
   const world_name = worldForm.querySelector('#new-world-name').value.trim();
-  // SE NYT OTTAA DEFAULTTINA TON ONGOING MANUAALISESTI, EN JAKSANUT NYT MIETTII TOTA LOGIIKKAA ET SE OTTAA OIKEEN
-  // JOS TESTAAT NI VALITSE AINA ONGOING
-  const status = worldForm.querySelector('#Ongoing-story').value.trim();
+
+  let status
+
+  const ongoing = document.getElementById('Ongoing-story')
+  const complete = document.getElementById('Complete-story')
+  if (ongoing.checked == true) {
+    console.log('Ongoing')
+    status = worldForm.querySelector('#Ongoing-story').value.trim();
+} else if (complete.checked == true) {
+    console.log('Complete')
+    status = worldForm.querySelector('#Complete-story').value.trim();
+} else {
+    console.log('Abandoned')
+    status = worldForm.querySelector('#Abandoned-story').value.trim();
+    console.log(status)
+}
   const user_id = localStorage.getItem('user_id')
   // Data for request
   const bodyData = {
