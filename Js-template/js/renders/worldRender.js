@@ -1,4 +1,4 @@
-import { categoriesConfig } from "../controllers/categoriesConfig.js";
+import { categoriesConfig } from "../controllers/worldPageController.js";
 import { mockArticles } from "../fetches/mockdata/articles.js";
 
 export function renderWorld(world) {

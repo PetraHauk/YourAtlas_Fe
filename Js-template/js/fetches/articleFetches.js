@@ -1,6 +1,6 @@
-import { mockArticles} from "./mockdata/articles";
-import { mockCast} from "./mockdata/characters";
-import { mockLocations} from "./mockdata/locations";
+import { mockArticles} from "./mockdata/articles.js";
+import { mockCast} from "./mockdata/characters.js";
+import { mockLocations} from "./mockdata/locations.js";
 
 export function getArticleById(articleId) {
   return mockArticles.find(article => article.article_id === articleId);

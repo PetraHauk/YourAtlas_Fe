@@ -1,5 +1,5 @@
 import { mockWorlds } from "./mockdata/worlds.js";
-import { appendCreateNewWorld } from "../controllers/worlds.js";
+import { appendCreateNewWorld } from "../controllers/frontPageController.js";
 
 // MOCKDATA
 export function fetchMockWorldData(id) {

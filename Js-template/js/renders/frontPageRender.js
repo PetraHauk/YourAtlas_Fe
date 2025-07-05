@@ -1,3 +1,5 @@
+// ------ Print Username -------
+
 export function printUsername() {
   const heading = document.querySelector(".your-username");
   if (!heading) return;
@@ -5,7 +7,7 @@ export function printUsername() {
   heading.innerHTML = `${username}`;
 }
 
-
+// --------- Basic page logic ---------
 
 export function renderWorlds(worlds) {
   const worldsContainer = document.getElementById("world-list");
@@ -20,11 +22,14 @@ export function renderWorlds(worlds) {
     const itemContainer = document.createElement("div");
     itemContainer.className = "world-item-container";
 
+    // New World card logic
     if (world.isCreate) {
       itemContainer.classList.add("create-new");
+      // Opens the Modal. Look below for the modal visibility logic
       itemContainer.addEventListener("click", () => {
         openCreateWorldModal();
       });
+
     } else {
       itemContainer.addEventListener("click", () => {
         window.location.href = `world.html?id=${world.id}`;
@@ -36,6 +41,7 @@ export function renderWorlds(worlds) {
 
     const image = document.createElement("img");
 
+    // World picture Image handling
     if (!world.image || world.image === "none") {
       image.src = "../images/placeholder.png";
       image.classList.add("placeholder");
@@ -59,6 +65,8 @@ export function renderWorlds(worlds) {
   });
 }
 
+// -------- Get the exact card width for the scroller -----------
+
 export function getCardTotalWidth() {
   const card = document.querySelector(".world-item");
   if (!card) return 0;
@@ -68,6 +76,8 @@ export function getCardTotalWidth() {
   const marginRight = parseFloat(style.marginRight);
   return width + marginLeft + marginRight;
 }
+
+// ------- Modal Opening and Closing logic (Hides and shows it using CSS) -------
 
 function openCreateWorldModal() {
   const modal = document.querySelector(".createWorldModale");

@@ -1,19 +1,15 @@
-import { getCharacterByArticleId } from "../fetches/characterData.js";
-import { getLocationByArticleId } from "../fetches/locationData.js";
-
-export function renderArticle(article) {
+export function renderArticle(article, extraData = null) {
   switch (article.type) {
     case "Cast":
-      return renderCharacterArticle(article);
+      return renderCharacterArticle(article, extraData);
     case "Location":
-      return renderLocationArticle(article);
+      return renderLocationArticle(article, extraData);
     default:
       return renderGeneralArticle(article);
   }
 }
 
-function renderCharacterArticle(article) {
-  const character = getCharacterByArticleId(article.article_id);
+function renderCharacterArticle(article, character) {
   const title = document.querySelector('#page-container h2');
   const content = document.querySelector('.article-content');
   const sideInfo = document.querySelector('.article-sidebox-info');
@@ -27,9 +23,6 @@ function renderCharacterArticle(article) {
 
   content.innerHTML = `
     <p><strong>Appearance:</strong> ${character.appearance}</p>
-    <p><strong>Backstory:</strong>
-      <p>Lorem ipsum...</p>
-    </p>
   `;
 
   sideInfo.innerHTML = `
@@ -39,8 +32,7 @@ function renderCharacterArticle(article) {
   `;
 }
 
-function renderLocationArticle(article) {
-  const location = getLocationByArticleId(article.article_id);
+function renderLocationArticle(article, location) {
   const title = document.querySelector('#page-container h2');
   const content = document.querySelector('.article-content');
   const sideInfo = document.querySelector('.article-sidebox-info');

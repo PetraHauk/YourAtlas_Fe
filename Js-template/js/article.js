@@ -1,12 +1,16 @@
-import { getArticleById } from "./fetches/articleFetches.js";
+import { loadFullArticle } from "./controllers/articleController.js";
 import { renderArticle } from "./renders/articleRender.js";
 
-const params = new URLSearchParams(window.location.search);
-const articleId = parseInt(params.get("articleId"), 10);
-const article = getArticleById(articleId);
+document.addEventListener("DOMContentLoaded", async () => {
+  const params = new URLSearchParams(window.location.search);
+  const articleId = parseInt(params.get("articleId"), 10);
 
-if (!article) {
-  document.getElementById('page-container').innerHTML = `<p>Article not found.</p>`;
-} else {
-  renderArticle(article);
-}
+  try {
+    const { article, extra } = await loadFullArticle(articleId);
+    renderArticle(article, extra);
+  } catch (err) {
+    console.error(err);
+    document.getElementById('page-container').innerText = `<p>${err.message}</p>`;
+  }
+});
+
